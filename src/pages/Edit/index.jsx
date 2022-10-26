@@ -35,7 +35,7 @@ const Edit = () => {
     formData.append("image", image)
      
     try {
-      await axios.put(`http://localhost:5000/api/v2/product/${id}`,
+      await axios.put(`https://backend-crud-m.herokuapp.com/api/v2/product/${id}`,
       formData, {
         headers: {
           "Content-Type": "multipart/form-data"
@@ -50,7 +50,7 @@ const Edit = () => {
   }
 
   const getProductById = async () => {
-    const response = await axios.get(`http://localhost:5000/api/v2/product/${id}`);
+    const response = await axios.get(`https://backend-crud-m.herokuapp.com/api/v2/product/${id}`);
     setName(response.data.name);
     setPrice(response.data.price);
     setStock(response.data.stock);
