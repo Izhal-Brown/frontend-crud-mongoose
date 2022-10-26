@@ -64,7 +64,7 @@ const Tambah = () => {
           errors: []
         });
       }
-      await axios.post('http://localhost:5000/api/v2/product',
+      await axios.post('https://backend-crud-m.herokuapp.com/api/v2/product',
         formData, {
         headers: {
           "Content-Type": "multipart/form-data"
